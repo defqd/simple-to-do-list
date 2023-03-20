@@ -50,11 +50,9 @@ namespace TodoListWebApi.Services
                 result.Status = todo.Status;
 
                 await _context.SaveChangesAsync();
-
-                return result;
             }
 
-            return null;
+            return result;
         }
     }
 }

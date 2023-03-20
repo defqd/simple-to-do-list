@@ -3,3 +3,5 @@
 ################################################################################
 
 /TodoListWebApi/TodoListWebApi/LocalDatabase.db
+/TodoListWebApi/TodoListWebApi/LocalDatabase.db-wal
+/TodoListWebApi/TodoListWebApi/LocalDatabase.db-shm
