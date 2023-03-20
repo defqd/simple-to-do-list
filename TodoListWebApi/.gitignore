@@ -264,10 +264,8 @@ UpgradeLog*.htm
 ServiceFabricBackup/
 *.rptproj.bak
 
-# SQL Server files
-*.mdf
-*.ldf
-*.ndf
+# Ignore the default SQLite database.
+/db/*.sqlite3
 
 # Business Intelligence projects
 *.rdl.data
