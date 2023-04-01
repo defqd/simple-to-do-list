@@ -8,7 +8,7 @@ namespace TodoListWebApi.Services
         Task<IEnumerable<Todo>> GetAllTodos();
         Task<Todo> GetTodo(int id);
         Task<Todo> AddTodo(Todo todo);
-        Task<Todo> MarkTodo(Todo todo);
+        Task<Todo> ToggleTodo(Todo todo);
         Task DeleteCheckedTodos(Todo[] todo);
     }
 }

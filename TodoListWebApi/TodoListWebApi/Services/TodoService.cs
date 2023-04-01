@@ -39,7 +39,7 @@ namespace TodoListWebApi.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Todo> MarkTodo(Todo todo)
+        public async Task<Todo> ToggleTodo(Todo todo)
         {
             var result = await _context.Todo.FirstOrDefaultAsync(e => e.Id == todo.Id);
 

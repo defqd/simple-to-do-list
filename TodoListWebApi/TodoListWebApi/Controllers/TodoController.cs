@@ -54,7 +54,7 @@ namespace TodoListWebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<Todo>> MarkTodo(int id, Todo todo)
+        public async Task<ActionResult<Todo>> ToggleTodo(int id, Todo todo)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace TodoListWebApi.Controllers
                 if (todoToUpdate == null)
                     return NotFound($"Todo with Id = {id} not found");
 
-                return await _todoService.MarkTodo(todo);
+                return await _todoService.ToggleTodo(todo);
             }
             catch (Exception)
             {
