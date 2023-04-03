@@ -6,20 +6,20 @@ interface Props {
     deleteCheckedTodo: DeleteCheckedTodos;
 }
 
-export const TodoList: React.FC<Props> = ({todos, toggleTodo, deleteCheckedTodo}) =>{
-    return(
-        <div className = "TodoList">
-            <button onClick={deleteCheckedTodo}>Delete checked todos</button>
+export const TodoList: React.FC<Props> = ({ todos, toggleTodo, deleteCheckedTodo }) => {
+    return (
+        <div className="todo-list">
             <ul>
-            {
-                todos.map((todo) => (
-                    <TodoListItem 
-                    key={todo.id} 
-                    todo={todo} toggleTodo={toggleTodo} />
-                ))
-            }
+                {
+                    todos.map((todo) => (
+                        <TodoListItem
+                            key={todo.id}
+                            todo={todo} toggleTodo={toggleTodo} />
+                    ))
+                }
             </ul>
+            <button className="delete-button" onClick={deleteCheckedTodo}>Delete checked</button>
         </div>
-        
+
     );
 }

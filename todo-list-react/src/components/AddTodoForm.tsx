@@ -4,19 +4,20 @@ interface Props {
     addTodo: AddTodo;
 }
 
-export const AddTodoForm: React.FC<Props> = ({addTodo}) => {
+export const AddTodoForm: React.FC<Props> = ({ addTodo }) => {
     const [description, setDescription] = useState<string>('');
 
-    return(
-        <form>
-           <input type="text"
-                value = {description}
+    return (
+        <form className="todo-form">
+            <input type="text"
+                value={description}
+                placeholder="Enter todo"
                 onChange={(e) => {
                     setDescription(e.target.value);
                 }}>
             </input>
-           <button 
-                type="submit" 
+            <button className="add-button"
+                type="submit"
                 onClick={(e) => {
                     e.preventDefault();
                     addTodo(description);

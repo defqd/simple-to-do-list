@@ -8,7 +8,7 @@ interface Props {
 
 export const TodoListItem: React.FC<Props> = ({todo, toggleTodo}) => {
     return(
-        <li>
+        <li className="todo-item">
             <label className={todo.status ? "complete" : undefined}>
                 <input type = 'checkbox' 
                     checked = {todo.status}
