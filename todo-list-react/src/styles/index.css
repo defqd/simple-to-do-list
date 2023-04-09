@@ -39,7 +39,6 @@ li {
 }
 
 .todo-item label {
-    text-decoration: none;
     color: #000;
     transition: opacity 0.5s;
     word-break: break-all;
